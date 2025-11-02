@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DPEDA - GHI Analysis</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header>
+    <h1>DPEDA: Global Hunger Index (GHI) Analysis</h1>
+  </header>
+
+  <nav class="tabs">
+    <a href="trends.html" class="tab-button">Trends Comparison</a>
+    <a href="ghi.html" class="tab-button active">GHI Analysis</a>
+  </nav>
+
+  <main class="page-content active">
+    <h2 class="page-title">Global Hunger Index Overview</h2>
+
+    <div class="chart-container">
+      <div id="loading-message-ghi" class="loading-message">Loading GHI data...</div>
+      <canvas id="ghiBarChart"></canvas>
+    </div>
+
+    <h3 class="data-title">GHI Raw Data (Country-wise)</h3>
+    <div class="table-container">
+      <table id="ghi-table"></table>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <p>Data Source: DPEDA processed dataset (ghi_wiki_cleaned.csv)</p>
+      <button class="donate-btn" onclick="window.open('https://www.unicef.org/donate', '_blank')">
+        💙 Donate Now
+      </button>
+    </div>
+  </footer>
+
+  <script src="ghi.js"></script>
+</body>
+</html>

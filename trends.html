@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DPEDA - Trends Comparison</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header>
+    <h1>DPEDA: Global Food Security Trends</h1>
+  </header>
+
+  <nav class="tabs">
+    <a href="trends.html" class="tab-button active">Trends Comparison</a>
+    <a href="ghi.html" class="tab-button">GHI Analysis</a>
+  </nav>
+
+  <main class="page-content active">
+    <h2 class="page-title">Compare Key Food Security Indicators</h2>
+
+    <div class="controls refined-controls">
+      <div class="control-group">
+        <label for="metric">Select Metric</label>
+        <select id="metric">
+          <option value="undernourishment_rate">Prevalence of Undernourishment (%)</option>
+          <option value="calorie_supply_per_person">Daily Calorie Supply (kcal/person/day)</option>
+          <option value="stunting_rate">Child Stunting Rate (%)</option>
+          <option value="agri_employment_share">Agricultural Employment Share (%)</option>
+        </select>
+      </div>
+
+      <div class="control-group">
+        <label for="country1">Country 1</label>
+        <select id="country1"></select>
+      </div>
+
+      <div class="control-group">
+        <label for="country2">Country 2</label>
+        <select id="country2"></select>
+      </div>
+    </div>
+
+    <div class="chart-container">
+      <div id="loading-message-trends" class="loading-message">Loading data...</div>
+      <canvas id="trendsChart"></canvas>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <p>Data Source: DPEDA processed dataset (output.csv)</p>
+      <button class="donate-btn" >
+        <a href="https://www.unicef.org/donate">💙 Donate Now</a>
+      </button>
+    </div>
+  </footer>
+
+  <script src="trends.js"></script>
+</body>
+</html>
+
+
+
